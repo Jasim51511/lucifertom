@@ -15,20 +15,20 @@ async def start_message(bot, message):
              InlineKeyboardButton("➕️ Add me to Your Chat ➕️", url=f"http://t.me/{bot_info.BOT_USERNAME}?startgroup=true")
              ],[
              InlineKeyboardButton("ℹ️ Help", callback_data="help"),
-             InlineKeyboardButton("😎 About", callback_data="about") 
-             ],[
-             InlineKeyboardButton("🗳 Deploy", url="https://youtu.be/OTqZmADyOjU"),
-             InlineKeyboardButton("🤖 Support", url="https://t.me/Mo_Tech_YT")
-             ]]
+
+
+
+
+
         else:
             buttons = [[
              InlineKeyboardButton("➕️ Add me to Your Chat ➕️", url=f"http://t.me/{bot_info.BOT_USERNAME}?startgroup=true")
              ],[
              InlineKeyboardButton("ℹ️ Help", callback_data="bot_owner"),
-             InlineKeyboardButton("😎 About", callback_data="about") 
-             ],[
-             InlineKeyboardButton("🗳 Deploy", url="https://youtu.be/OTqZmADyOjU"),
-             InlineKeyboardButton("🤖 Support", url="https://t.me/Mo_Tech_Group")
+             
+   
+
+
              ]]    
         await message.reply_photo(photo = random.choice(BOT_PICS), caption=START_MSG.format(mention = message.from_user.mention, bot_name = bot_info.BOT_NAME, bot_username = bot_info.BOT_USERNAME), reply_markup=InlineKeyboardMarkup(buttons))
         
@@ -50,7 +50,7 @@ async def start_message(bot, message):
 async def help(bot, message):
     button = [[
      InlineKeyboardButton("🏠 Home", callback_data="start"),
-     InlineKeyboardButton("About 😎", callback_data="about")
+
      ]]
     await message.reply_photo(
         photo = random.choice(BOT_PICS),
